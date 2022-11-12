@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e6edf2;
+  font-family: "Euclid Circular A";
+}
+
+button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 72px;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: #585c62;
+  cursor: pointer;
+}
+
+.burger {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 72px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 20px 24px 0;
+  translate: -100% 0;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ffffff;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition-property: translate, opacity, visibility;
+  transition-duration: 0.5s;
+}
+
+body.open .navbar {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+
+@media (width >= 500px) {
+  .navbar {
+    translate: 0 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    width: 100%;
+    height: 72px;
+    padding: 0 0 0 72px;
+  }
+}
+
+@media (width >= 600px) {
+  .navbar {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 108px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media (width >= 500px) {
+  .logo {
+    margin-bottom: 0;
+  }
+}
+
+.logo img {
+  width: 32px;
+}
+
+.logo span {
+  font-size: 18px;
+  color: #606468;
+}
+
+.search {
+  margin: 0 auto;
+  position: relative;
+  color: #888989;
+}
+
+@media (width >= 500px) {
+  .search {
+    flex: 1 1 auto;
+  }
+}
+
+@media (width >= 550px) {
+  .search {
+    flex: 0 0 auto;
+  }
+}
+
+.search span {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  translate: 0 -50%;
+  z-index: 1;
+  font-size: 20px;
+  color: inherit;
+}
+
+.search input {
+  width: 100%;
+  height: 44px;
+  padding-left: 46px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #eff1f2;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+@media (width >= 650px) {
+  .search input {
+    width: 280px;
+  }
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.navbar nav img {
+  flex: 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
