@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #202124;
+  font-family: Roboto;
+}
+
+button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 72px;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 6px;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 12px;
+  border-radius: 6px;
+  background: red;
+  font-size: 8px;
+  font-weight: 500;
+  font-family: Roboto;
+}
+
+.burger {
+  width: 72px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #0f0f0f;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 88px;
+  padding-right: 10px;
+}
+
+@media (width >= 500px) {
+  .logo {
+    margin-bottom: 0;
+  }
+}
+
+.logo img {
+  height: 20px;
+}
+
+.center {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  color: #888989;
+}
+
+.center button {
+  display: none;
+  background: #1e1e1e;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+@media (width >= 500px) {
+  .center button {
+    display: block;
+  }
+}
+
+.search {
+  position: relative;
+  display: none;
+}
+
+@media (width >= 500px) {
+  .search {
+    display: block;
+  }
+}
+
+.search button {
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  translate: 0 -50%;
+  z-index: 1;
+  font-size: 20px;
+  width: 60px;
+  height: 42px;
+  border-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #222222;
+}
+
+.search input {
+  flex: 1 1 auto;
+  height: 44px;
+  width: 25vw;
+  padding-left: 16px;
+  padding-right: 60px;
+  font-size: 16px;
+  border: 1px solid #303030;
+  border-radius: 22px;
+  background: #121212;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 400;
+  outline: none;
+}
+
+@media (width >= 650px) {
+  .search input {
+    width: 240px;
+  }
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.navbar nav img {
+  flex: 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
+
+@media (width >= 500px) {
+  .navbar nav button:is(:nth-child(1), :nth-child(2)) {
+    display: none;
+  }
+}
+
+@media (width < 400px) {
+  .navbar nav button:is(:nth-child(2), :nth-child(4)) {
+    display: none;
+  }
+}
