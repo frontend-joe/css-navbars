@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #2ebdff;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Euclid Circular A";
+  background: #f9f9f9;
+  color: #f9f9f9;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  background: #17181a;
+  width: 100%;
+}
+
+.navbar h1 {
+  display: none;
+  flex: 2 1 auto;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 0 0 16px;
+}
+
+@media (width >= 440px) {
+  .navbar {
+    top: 0;
+    bottom: auto;
+  }
+
+  .tabs {
+    scale: 0.8;
+    width: 200px;
+  }
+
+  .navbar h1 {
+    display: block;
+  }
+}
+
+.tabs {
+  flex: 1 1 auto;
+}
+
+.tabs > input {
+  display: none;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+label {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  font-size: 15px;
+  flex: 1 1 auto;
+  min-width: 58px;
+  opacity: 0.35;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+}
+
+.underline {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -3px;
+  width: 25%;
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  translate: 0 -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.tabs input:nth-child(1):checked ~ .buttons .underline {
+  translate: 0 0;
+}
+
+.tabs input:nth-child(2):checked ~ .buttons .underline {
+  translate: 100% 0;
+}
+
+.tabs input:nth-child(3):checked ~ .buttons .underline {
+  translate: 200% 0;
+}
+
+.tabs input:nth-child(4):checked ~ .buttons .underline {
+  translate: 300% 0;
+}
+
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.tabs input:nth-child(4):checked ~ .buttons label:nth-child(4) {
+  opacity: 1;
+  color: black;
+}
