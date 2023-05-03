@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 60px;
+  padding: 0 20px;
+  background: #161b22;
+}
+
+nav img {
+  width: 30px;
+  height: 30px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-items,
+.menu {
+  display: flex;
+  gap: 16px;
+}
+
+.menu-right {
+  position: relative;
+  margin-left: auto;
+  gap: 6px;
+}
+
+.menu-right img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.menu-right .badge {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #161b22;
+  background: linear-gradient(#54a3ff, #006eed);
+}
+
+a,
+a:is(:visited, :active) {
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding-right: 4px;
+}
+
+.search input {
+  padding: 4px 10px;
+  color: #c9d1d9;
+  font-size: 13px;
+  font-family: inherit;
+  border: 0;
+  background: transparent;
+}
+
+.search button {
+  border: inherit;
+  border-radius: inherit;
+  background: transparent;
+  color: #8b949e;
+}
+
+@media (width <= 580px) {
+  .menu-right img:nth-child(n + 3) {
+    display: none;
+  }
+
+  .menu-items {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 0 20px 20px;
+    background: #161b22;
+  }
+
+  .menu-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .menu-left a {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 10px;
+  }
+
+  .menu-right {
+    margin-left: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+body.open .menu-items {
+  display: flex;
+}

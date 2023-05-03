@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar 11</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img
+        onclick="document.body.classList.toggle('open')"
+        class="burger"
+        src="menu.svg"
+      />
+      <img src="github.svg" />
+      <div class="menu-items">
+        <div class="search">
+          <input value="Search or jump to..." />
+          <button>/</button>
+        </div>
+        <div class="menu menu-left">
+          <a href="#">Pulls</a>
+          <a href="#">Issues</a>
+          <a href="#">Explore</a>
+        </div>
+      </div>
+      <div class="menu menu-right">
+        <span class="badge"></span>
+        <img src="bell.svg" />
+        <img src="plus.svg" />
+        <img src="avatar.png" />
+      </div>
+    </nav>
+  </body>
+</html>

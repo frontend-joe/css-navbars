@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  background: rgb(27 32 44 / 100%);
+  color: #f9f9f9;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 88px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(27 32 44 / 70%);
+  -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  -ms-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  backface-visibility: hidden;
+  transform: translateZ(0px);
+  transition: 0.3s;
+}
+
+nav img {
+  height: 40px;
+}
+
+nav i {
+  font-size: 30px;
+  color: #f9f9f9;
+}
+
+main {
+  padding: 10px 30px;
+}
+
+article {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto 32px;
+  border-radius: 16px;
+  background-color: #272e3c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+article img {
+  height: 60px;
+}
+
+article name {
+  color: rgb(255 255 255 / 50%);
+}
+
+article p {
+  margin: 8px 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}

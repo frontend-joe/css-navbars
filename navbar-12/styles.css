@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  padding: 0 20px;
+  color: #222222;
+  background: #ffffff;
+  border-bottom: 1px solid #f2f2f2;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.logo,
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  gap: 12px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.logo h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+a.join-link {
+  display: grid;
+  place-items: center;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 6px;
+  color: #f9f9f9;
+  background: #01a081;
+}
+
+.search {
+  flex: 1 1 auto;
+  position: relative;
+  margin-left: 10px;
+}
+
+.search input {
+  background: #f2f2f2;
+  border-radius: 6px;
+  border: 0;
+  width: 100%;
+  height: 40px;
+  padding-left: 34px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.search input::placeholder {
+  color: #9d9d9d;
+}
+
+.search img {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  translate: 0 -50%;
+  width: 20px;
+  height: 20px;
+}
+
+.burger {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+}
+
+@media (width >= 320px) {
+  .burger {
+    display: none;
+  }
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 72px;
+}
+.dropdown > a > img {
+  width: 20px;
+}
+
+.dropdown:hover .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: -20px;
+  display: grid;
+  width: 180px;
+  padding: 8px 0;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s;
+}
+
+.menu::before {
+  content: "";
+  background: inherit;
+  border-top: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  position: absolute;
+  top: -7px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  rotate: -45deg;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > a {
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+.menu > a:hover {
+  background: #f5f5f5;
+}
