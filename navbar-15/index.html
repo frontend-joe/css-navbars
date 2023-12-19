@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar 14</title>
+    <title>Sidebar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,20 +14,20 @@
   </head>
   <body>
     <nav>
-      <a class="item">Home</a>
-      <a class="item">About</a>
-      <div class="item">
-        Skills
-        <div class="dropdown">
-          <div>
-            <a>React</a>
-            <a>Angular</a>
-            <a>Vue</a>
-          </div>
-        </div>
-      </div>
-      <a class="item">Contact</a>
-      <div class="underline"></div>
+      <ul class="menu">
+        <li><a>About</a></li>
+        <li><a>Works</a></li>
+        <li>
+          <a>Skills</a>
+          <ul class="submenu">
+            <li><a>React</a></li>
+            <li><a>Svelte</a></li>
+            <li><a>VueJs</a></li>
+          </ul>
+        </li>
+        <li><a>Blogs</a></li>
+        <li><a>Contact</a></li>
+      </ul>
     </nav>
   </body>
 </html>

@@ -1,0 +1,104 @@
+body {
+  font-family: "Euclid Circ.menuar A", "Poppins";
+  font-size: 18px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #1a2027;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 70px;
+}
+
+.menu li {
+  display: inline-block;
+  width: 90px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu li:hover .submenu {
+  height: 85px;
+}
+
+.menu > li:hover > a {
+  color: #3e95ff;
+}
+
+.menu > li:hover > a::before {
+  visibility: visible;
+  scale: 1 1;
+}
+
+.submenu {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  background-color: #3e95ff;
+  height: 0;
+  line-height: 40px;
+  box-sizing: border-box;
+  transition: height 0.3s ease-in-out;
+}
+.menu li .submenu a {
+  color: #fff;
+  opacity: 0;
+  font-size: 16px;
+  transition: opacity 0.25s;
+}
+
+.menu > li:hover .submenu a {
+  opacity: 1;
+}
+
+.menu > li .submenu a:hover {
+  background: rgb(0 0 0 / 20%);
+}
+
+.menu > li a {
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7px;
+  text-decoration: none;
+  position: relative;
+  height: 100%;
+}
+
+.menu > li > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 3px;
+  left: 0px;
+  background-color: #3e95ff;
+  transition: all 0.2s ease-in-out;
+  scale: 0 0;
+  visibility: hidden;
+}
